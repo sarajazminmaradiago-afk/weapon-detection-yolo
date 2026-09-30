@@ -1,0 +1,33 @@
+# --- Entornos virtuales (14 GB entre los dos, se reconstruyen con pip) ---
+.venv/
+venv/
+ENV/
+
+# --- Pesos de modelos (se descargan) ---
+# mask_rcnn_coco.h5 (257 MB): https://github.com/matterport/Mask_RCNN/releases
+# Los de torchvision se cachean solos en ~/.cache/torch/hub/checkpoints/
+*.h5
+*.pth
+*.pt
+
+# --- Datos ---
+# OD-WeaponDetection-master/ son 5 GB y 63k ficheros del repo publico del DaSCI:
+#   git clone https://github.com/ari-dasci/OD-WeaponDetection
+OD-WeaponDetection-master/
+datasets/
+
+# --- Salidas de experimentos ---
+logs/
+results/
+temp/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*.egg-info/
+
+# --- Editores ---
+.vscode/
+.idea/
