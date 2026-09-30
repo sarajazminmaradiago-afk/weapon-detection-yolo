@@ -1,3 +1,13 @@
+# --- Secretos / credenciales (la URL RTSP lleva la contrasena de la camara) ---
+# El modulo de streaming lee la URL de una variable de entorno o del config.py
+# del proyecto face_recognition; nunca se guarda el secreto en este repo.
+.env
+.env.*
+!.env.example
+config_local.py
+credentials*
+secrets*
+
 # --- Entornos virtuales (14 GB entre los dos, se reconstruyen con pip) ---
 .venv/
 venv/
@@ -20,6 +30,19 @@ datasets/
 logs/
 results/
 temp/
+# Prueba de humo de 1 época: solo comprobaba que el entrenamiento arrancaba.
+runs/smoke/
+
+# --- Material de terceros que no se publica ---
+old_example_proposal.pdf
+
+# --- Capturas del stream (contienen imagenes de personas: NUNCA a git) ---
+captures/
+runs/stream/
+*.mp4
+# El ajuste fino y la evaluación local guardan mosaicos con imágenes de las capturas.
+runs/ft_*/
+runs/eval_local_*/
 
 # --- Python ---
 __pycache__/
@@ -31,3 +54,20 @@ __pycache__/
 # --- Editores ---
 .vscode/
 .idea/
+
+# Las clases y estilos descargados de CTAN (IEEEtran, apa7, apacite) SI van a
+# git a proposito: hacen que el documento compile en cualquier maquina sin
+# instalar texlive-publishers ni texlive-science.
+
+# LaTeX (doc/, incluidos los subdirectorios document/ y propuesta/)
+doc/**/*.aux
+doc/**/*.log
+doc/**/*.out
+doc/**/*.bbl
+doc/**/*.blg
+doc/**/*.toc
+doc/**/*.synctex.gz
+
+# Fuentes primarias descargadas (se recuperan con doc/fuentes/descargar.sh)
+doc/fuentes/*.pdf
+doc/fuentes/*.html

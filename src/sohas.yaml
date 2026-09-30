@@ -1,0 +1,16 @@
+# Configuración del conjunto Sohas weapon detection (formato YOLO) para Ultralytics.
+# Las etiquetas se resuelven automáticamente sustituyendo /images/ por /labels/.
+# La partición train/test es la oficial del DaSCI (5002 / 857 imágenes).
+
+path: /home/sara/Documents/other/weapon_detection/OD-WeaponDetection-master/Weapons and similar handled objects/Sohas_weapon-Detection-YOLOv5/obj_train_data
+train: images/train
+val: images/test
+
+# El orden de las clases debe coincidir con los índices de los ficheros .txt.
+names:
+  0: pistol
+  1: smartphone
+  2: knife
+  3: monedero
+  4: billete
+  5: tarjeta
