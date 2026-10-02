@@ -55,19 +55,6 @@ __pycache__/
 .vscode/
 .idea/
 
-# Las clases y estilos descargados de CTAN (IEEEtran, apa7, apacite) SI van a
-# git a proposito: hacen que el documento compile en cualquier maquina sin
-# instalar texlive-publishers ni texlive-science.
-
-# LaTeX (doc/, incluidos los subdirectorios document/ y propuesta/)
-doc/**/*.aux
-doc/**/*.log
-doc/**/*.out
-doc/**/*.bbl
-doc/**/*.blg
-doc/**/*.toc
-doc/**/*.synctex.gz
-
-# Fuentes primarias descargadas (se recuperan con doc/fuentes/descargar.sh)
-doc/fuentes/*.pdf
-doc/fuentes/*.html
+# --- Documento ---
+# El documento se mantiene en Overleaf, fuera del repositorio.
+doc/
